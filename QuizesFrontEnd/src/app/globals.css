@@ -1,12 +1,60 @@
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: whitesmoke;
+}
+
+header {
+    width: 100vw;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+  height: 90%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+
+  h2{
+    color: rgb(124, 112, 96);
+  }
+
+}
+
+.searchBox{
+    display: inline-flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 400px;
+    input{
+      display: inline;
+      border-radius: 20px;
+      border: none;
+      color:white;
+      padding: 16px;
+      background-color: rgb(12, 12, 160);
+    }
+    input::placeholder{
+      color:white;
+    }
+
+    button{
+      padding: 10px 16px;
+      color: white;
+      background-color: green;
+      border: none;
+      border-radius: 20px; 
+    }
 }
