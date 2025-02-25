@@ -636,7 +636,7 @@ const API = {
       ],
     },
     {
-      name: "niology",
+      name: "biology",
       questions: [
         {
           id: 0,
@@ -733,6 +733,358 @@ const API = {
       ],
     },
   ],
+  Languages: [
+    {
+      name: "english",
+      questions: [
+        {
+          id: 0,
+          question: "Which of the following is a proper noun?",
+          options: ["cat", "school", "London", "apple"],
+          correct_answer: "London",
+        },
+        {
+          id: 1,
+          question:
+            "Choose the correct form of the verb: 'She ______ to the store every day.'",
+          options: ["go", "goes", "gone", "going"],
+          correct_answer: "goes",
+        },
+        {
+          id: 2,
+          question: "Which sentence is in the passive voice?",
+          options: [
+            "He reads a book.",
+            "The book is read by him.",
+            "He is reading a book.",
+            "He read the book.",
+          ],
+          correct_answer: "The book is read by him.",
+        },
+        {
+          id: 3,
+          question: "Which of the following sentences is a question?",
+          options: [
+            "I am going to the store.",
+            "Is she coming to the party?",
+            "They are here.",
+            "We watched a movie.",
+          ],
+          correct_answer: "Is she coming to the party?",
+        },
+        {
+          id: 4,
+          question: "Choose the correct sentence.",
+          options: [
+            "She don't like pizza.",
+            "She doesn't like pizza.",
+            "She don't likes pizza.",
+            "She not like pizza.",
+          ],
+          correct_answer: "She doesn't like pizza.",
+        },
+        {
+          id: 5,
+          question: "Which is the correct past tense of 'go'?",
+          options: ["went", "gone", "going", "goes"],
+          correct_answer: "went",
+        },
+        {
+          id: 6,
+          question:
+            "What is the correct form of the adjective? 'This is the ______ book I have read.'",
+          options: [
+            "most interesting",
+            "more interesting",
+            "interestingly",
+            "interesting more",
+          ],
+          correct_answer: "most interesting",
+        },
+        {
+          id: 7,
+          question: "Which sentence is in the future tense?",
+          options: [
+            "She is reading a book.",
+            "She reads a book.",
+            "She will read a book.",
+            "She read a book.",
+          ],
+          correct_answer: "She will read a book.",
+        },
+        {
+          id: 8,
+          question:
+            "Choose the correct comparative form: 'This test is ______ than the last one.'",
+          options: ["more easier", "easier", "more easy", "easy"],
+          correct_answer: "easier",
+        },
+        {
+          id: 9,
+          question:
+            "Which of these sentences uses the correct word order for a negative statement?",
+          options: [
+            "I do not like it.",
+            "Not I like it.",
+            "I like not it.",
+            "Not I it like.",
+          ],
+          correct_answer: "I do not like it.",
+        },
+      ],
+    },
+    {
+      name: "german",
+      question: [
+        {
+          id: 0,
+          question: "What is the German word for 'apple'?",
+          options: ["Apfel", "Birne", "Banane", "Pfirsich"],
+          correct_answer: "Apfel",
+        },
+        {
+          id: 1,
+          question:
+            "Choose the correct form of the verb: 'Er ______ nach Hause.'",
+          options: ["geht", "gehe", "gehen", "gehtet"],
+          correct_answer: "geht",
+        },
+        {
+          id: 2,
+          question: "Which sentence is in the passive voice?",
+          options: [
+            "Der Hund beißt den Mann.",
+            "Der Mann wird von dem Hund gebissen.",
+            "Der Hund hat den Mann gebissen.",
+            "Der Mann beißt den Hund.",
+          ],
+          correct_answer: "Der Mann wird von dem Hund gebissen.",
+        },
+        {
+          id: 3,
+          question: "What is the correct word order for a German question?",
+          options: [
+            "Er geht ins Kino?",
+            "Geht er ins Kino?",
+            "Ins Kino geht er?",
+            "Kino geht er ins?",
+          ],
+          correct_answer: "Geht er ins Kino?",
+        },
+        {
+          id: 4,
+          question: "Which sentence is in the past tense?",
+          options: [
+            "Er geht zur Schule.",
+            "Er ging zur Schule.",
+            "Er geht gegangen zur Schule.",
+            "Er geht in die Schule.",
+          ],
+          correct_answer: "Er ging zur Schule.",
+        },
+        {
+          id: 5,
+          question: "What is the German word for 'house'?",
+          options: ["Haus", "Zimmer", "Tisch", "Fenster"],
+          correct_answer: "Haus",
+        },
+        {
+          id: 6,
+          question:
+            "Which sentence uses the correct form of 'haben' in the present tense?",
+          options: [
+            "Ich habe einen Hund.",
+            "Ich hast einen Hund.",
+            "Ich hat einen Hund.",
+            "Ich habe Hund einen.",
+          ],
+          correct_answer: "Ich habe einen Hund.",
+        },
+        {
+          id: 7,
+          question: "Which sentence is correct?",
+          options: [
+            "Wir fahren morgen nach Berlin.",
+            "Wir fahren nach morgen Berlin.",
+            "Morgen wir fahren nach Berlin.",
+            "Wir nach fahren Berlin morgen.",
+          ],
+          correct_answer: "Wir fahren morgen nach Berlin.",
+        },
+        {
+          id: 8,
+          question:
+            "Which form of the adjective is correct? 'Das ist ein ______ Buch.'",
+          options: [
+            "interessant",
+            "interessanter",
+            "interessantes",
+            "interessanten",
+          ],
+          correct_answer: "interessantes",
+        },
+        {
+          id: 9,
+          question: "Which of these is a correct question in German?",
+          options: [
+            "Bist du müde?",
+            "Du bist müde?",
+            "Müde bist du?",
+            "Bist du müde.",
+          ],
+          correct_answer: "Bist du müde?",
+        },
+      ],
+    },
+    {
+      name: "french",
+      questions: [
+        {
+          id: 0,
+          question: "What is the French word for 'book'?",
+          options: ["livre", "papier", "stylo", "cahier"],
+          correct_answer: "livre",
+        },
+        {
+          id: 1,
+          question:
+            "Which is the correct conjugation of 'avoir' (to have) in the present tense for 'nous'?",
+          options: ["nous avons", "nous avez", "nous ai", "nous a"],
+          correct_answer: "nous avons",
+        },
+        {
+          id: 2,
+          question: "Which sentence is in the future tense?",
+          options: ["Je mange.", "Je mangerai.", "Je mangé.", "Je mangeais."],
+          correct_answer: "Je mangerai.",
+        },
+        {
+          id: 3,
+          question: "Which is the correct question form in French?",
+          options: [
+            "Il mange une pomme?",
+            "Mangez il une pomme?",
+            "Mange-t-il une pomme?",
+            "Une pomme mange-t-il?",
+          ],
+          correct_answer: "Mange-t-il une pomme?",
+        },
+        {
+          id: 4,
+          question: "What is the French word for 'school'?",
+          options: ["école", "maison", "bureau", "restaurant"],
+          correct_answer: "école",
+        },
+        {
+          id: 5,
+          question: "Which of these sentences is in the past tense?",
+          options: ["J'ai mangé.", "Je mange.", "Je mangerai.", "Je mangeais."],
+          correct_answer: "J'ai mangé.",
+        },
+        {
+          id: 6,
+          question: "Which sentence is correct?",
+          options: [
+            "Nous avons mange",
+            "Nous mangé avons",
+            "Nous mangons",
+            "Nous avons mangé",
+          ],
+          correct_answer: "Nous avons mangé",
+        },
+        {
+          id: 7,
+          question: "Which word is a verb in French?",
+          options: ["manger", "chien", "livre", "école"],
+          correct_answer: "manger",
+        },
+        {
+          id: 8,
+          question: "What is the French word for 'friend' (masculine)?",
+          options: ["ami", "amie", "amis", "amical"],
+          correct_answer: "ami",
+        },
+        {
+          id: 9,
+          question: "Which of the following is a correct French sentence?",
+          options: [
+            "Elle est allé au marché.",
+            "Elle va allé au marché.",
+            "Elle va aller au marché.",
+            "Elle va marché au marché.",
+          ],
+          correct_answer: "Elle va aller au marché.",
+        },
+      ],
+    },
+    {
+      name: "georgian",
+      questions: [
+        {
+          id: 0,
+          question: "What is the Georgian word for 'book'?",
+          options: ["წიგნი", "მაიკა", "ნამგალი", "ტელეფონი"],
+          correct_answer: "წიგნი",
+        },
+        {
+          id: 1,
+          question:
+            "Which of these is the correct translation for 'I am going'?",
+          options: ["მივდივარ", "მივიდა", "მივიდაა", "მივდივართ"],
+          correct_answer: "მივდივარ",
+        },
+        {
+          id: 2,
+          question: "What is the word for 'school' in Georgian?",
+          options: ["სკოლა", "ხიდი", "შუა", "ყურსაწვდი"],
+          correct_answer: "სკოლა",
+        },
+        {
+          id: 3,
+          question: "How do you say 'thank you' in Georgian?",
+          options: ["გმადლობთ", "გმადლოა", "მადლობა", "ჩემი მეგობარი"],
+          correct_answer: "მადლობა",
+        },
+        {
+          id: 4,
+          question: "Which of these is the correct future tense in Georgian?",
+          options: ["მივალ", "მივლია", "მივალდი", "მივლოდ"],
+        },
+        {
+          id: 5,
+          question: "What is the word for 'dog' in Georgian?",
+          options: ["ძაღლი", "კატა", "ბრინჯი", "სათვალე"],
+          correct_answer: "ძაღლი",
+        },
+        {
+          id: 6,
+          question: "What is the Georgian word for 'friend'?",
+          options: ["მეგობარი", "თამაშები", "ცხოველი", "სახლი"],
+          correct_answer: "მეგობარი",
+        },
+        {
+          id: 7,
+          question:
+            "Which of these is the correct form of 'to eat' in the present tense?",
+          options: ["ვჭამ", "ვჭამს", "ჭამ", "ჭამს"],
+          correct_answer: "ვჭამ",
+        },
+        {
+          id: 8,
+          question: "Which word means 'beautiful' in Georgian?",
+          options: ["ლამაზი", "ცხელ", "დიდი", "სუსტი"],
+          correct_answer: "ლამაზი",
+        },
+        {
+          id: 9,
+          question:
+            "What is the correct translation for 'Where are you?' in Georgian?",
+          options: ["სად ხარ?", "სად შენ?", "შენ სად ხარ?", "შენ სად?"],
+          correct_answer: "სად ხარ?",
+        },
+      ],
+    },
+  ],
 };
 
 const FastRef = [
@@ -748,6 +1100,13 @@ const FastRef = [
 
     Quizes: ["Physics", "Math ", "Chemistry ", "Biology "],
   },
+  {
+    name: "Languages",
+    img: "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2023/03/032723_ec_language-brain-differences_feat.jpg",
+
+    Quizes: ["English", "German", "Franch", "Georgian"],
+  },
 ];
+
 
 module.exports = {API,FastRef};

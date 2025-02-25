@@ -1,4 +1,3 @@
-import { useState } from "react";
 import FetchQuiz from "../CustomHoks/FetchQuiz";
 import SuggestedCard from "./SuggestedCard";
 
@@ -19,16 +18,27 @@ const Suggestions = () => {
     sessionStorage.removeItem(topic)
   }, 5*1000 *60);
 
+
+    if(data){
     return (
       <div className="suggestions">
         <h3>Suggested Quizes</h3>
         <div className="suggestedCards">
-          {data?data.map((el,index)=>{
-           return <SuggestedCard name={el.name} img={el.img} key={index} Quizes={el.Quizes} />;
-          }):null}
+          {data.map((el, index) => {
+            return (
+              <SuggestedCard
+                name={el.name}
+                img={el.img}
+                key={index}
+                Quizes={el.Quizes}
+              />
+            );
+          })}
         </div>
       </div>
-    );
+    )}else{
+      return 
+    }
 }
 
 export default Suggestions

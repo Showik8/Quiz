@@ -17,6 +17,7 @@ const SearchBox= () => {
   const handleSubmit=()=>{
     setTopic(inputValue)
     setFetched(true)
+    setInputValue(" ")
   }
 
 

@@ -11,22 +11,42 @@ app.use(express.static(path.join(__dirname, "assets")));
 app.use(cors());
 
 const {API,FastRef} = require("./API");
-const { Programing, Science } = API;
+const { Programing, Science,Languages } = API;
 
 
 app.get("/", (req, res) => {
-  console.log(FastRef);
   res.send(FastRef);
 });
 
-app.get("/programing", (req, res) => {
-  res.send(Programing);
+app.get("/api/:id", (req, res) => {
+  let id = req.params.id;
+  let Topic =id.charAt(0).toUpperCase() + id.slice(1)
+  let search = API[Topic]
+
+  res.send(search)
+
 });
+
+
+
+
+// app.get("/api/programing", (req, res) => {
+//   const path = req.path
+//   const nameOfQuiz = path.slice(1)
+//   console.log(nameOfQuiz);
+//   res.send(API.Programing);
+  
+// });
+
+
 
 app.get("/science",(req,res)=>{
   res.send(Science);
 });
 
+app.get("/Languages", (req, res) => {
+  res.send(Languages);
+});
 
 app.get("/programing/:id", (req, res) => {
   const id = req.params.id.toLocaleLowerCase();
@@ -40,6 +60,11 @@ app.get("/science/:id",(req,res)=>{
   res.send(indexQuiz[0])
 });
 
+app.get("/languages/:id", (req, res) => {
+  const id = req.params.id.toLocaleLowerCase();
+  const indexQuiz = Languages.filter((item) => item.name === id);
+  res.send(indexQuiz[0]);
+});
 
 app.get("/quiz/:id",(req,res)=>{
   const id = req.params.id.toLocaleLowerCase()
