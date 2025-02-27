@@ -28,8 +28,7 @@ const FetchQuiz = (URL, fetched, topic) => {
         setLoading(false);
       }
     };
-
-    const savedQuizData = sessionStorage.getItem({topic});
+    const savedQuizData = sessionStorage.getItem(topic);
     if (savedQuizData) {
       setQuizData(JSON.parse(savedQuizData));
       setLoading(false);

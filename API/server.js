@@ -29,25 +29,6 @@ app.get("/api/:id", (req, res) => {
 
 
 
-
-// app.get("/api/programing", (req, res) => {
-//   const path = req.path
-//   const nameOfQuiz = path.slice(1)
-//   console.log(nameOfQuiz);
-//   res.send(API.Programing);
-  
-// });
-
-
-
-app.get("/science",(req,res)=>{
-  res.send(Science);
-});
-
-app.get("/Languages", (req, res) => {
-  res.send(Languages);
-});
-
 app.get("/programing/:id", (req, res) => {
   const id = req.params.id.toLocaleLowerCase();
   const indexQuiz = Programing.filter((item)=>item.name === id)

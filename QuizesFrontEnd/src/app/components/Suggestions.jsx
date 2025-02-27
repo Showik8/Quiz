@@ -9,7 +9,7 @@ const Suggestions = () => {
 
   FetchQuiz(URL, fetched, topic);
 
-  const savedData= sessionStorage.getItem(topic)
+  const savedData= sessionStorage.getItem(topic)|| null
   let data = ''
 
   savedData? data = JSON.parse(savedData): null;

@@ -1,18 +1,28 @@
 "use client"
 import React from "react"
+import FetchQuiz from "../../CustomHoks/FetchQuiz";
+import Card from './card'
 
+import "@/app/styles/api.css"
 export default function SlugPage({ params }) {
   const { slug } = React.use(params);
+  const URL = `http://localhost:8888/api/${slug}`;
 
-  // Check if `slug` is available
-  if (!slug) {
-    return <div>Loading...</div>; // Or a loading spinner
+  const {quizData,loading,error} = FetchQuiz(URL,true,slug);
+  
+
+  if (loading) {
+    return <div>Loading...</div>; 
   }
 
-  return (
-    <div>
-      <h1>Slug Page</h1>
-      <p>Slug: {slug}</p>
-    </div>
+  if(quizData){return (
+    <section>
+      <h2>Choose Quiz</h2>
+     <div className="slugCards">
+        {quizData.map((element, index) => (
+          <Card key={index} name={element.name} />
+        ))}
+      </div>
+    </section>
   );
-}
+}}

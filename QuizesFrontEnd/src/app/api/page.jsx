@@ -3,11 +3,10 @@
 import { useRouter } from "next/navigation";
 import StartQuiz from "../components/StartQuiz";
 
-export default function SlugPage() {
+ const SlugPage = () => {
   const router = useRouter();
   const  slug  = router.query;
 
-  console.log(slug)
 
 
 return (
@@ -16,6 +15,7 @@ return (
       <div>
         <h1>Slug Page</h1>
         <p>Slug: {slug}</p>
+        <p>ჭოო</p>
       </div>
     ) : (
       <StartQuiz />
@@ -23,3 +23,5 @@ return (
   </>
 ); 
 }
+
+export default SlugPage

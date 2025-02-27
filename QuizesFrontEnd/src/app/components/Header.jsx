@@ -2,7 +2,9 @@ const Header =()=>{
     
 
     return (
-        <header>Rame kargi teqsti</header>
+        <header>
+            <h2>Search Quizzes here</h2>
+        </header>
     )
 }
 

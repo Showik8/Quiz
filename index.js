@@ -9,29 +9,28 @@
 //   console.log(data);
 // }
 
-// const data =async () =>{
-//     const respons = await fetch("http://localhost:3000/");
-//     const data = await respons.json()
-//     console.log(data)
-// }
-
-// data()
-// // fetchQuiz("html");
-
-
-const obj = {
-  rame:{
-    agi:"agi"
-  },
-  rume:{
-    agi:"igi"
-  }
+const data =async () =>{
+    const respons = await fetch("http://localhost:8888/api/languages");
+    const data = await respons.json()
+    console.log(data)
 }
 
-Object.keys(obj).map((key) => {
-  console.log(key, obj[key]); // Logs key and its corresponding value
-}); // aconsollogebs rame
+data()
 
-Object.values(obj).map((value) => {
-  console.log(value); // Logs the value of each key-value pair
-}); // agi
+
+// const obj = {
+//   rame:{
+//     agi:"agi"
+//   },
+//   rume:{
+//     agi:"igi"
+//   }
+// }
+
+// Object.keys(obj).map((key) => {
+//   console.log(key, obj[key]); // Logs key and its corresponding value
+// }); // aconsollogebs rame
+
+// Object.values(obj).map((value) => {
+//   console.log(value); // Logs the value of each key-value pair
+// }); // agi
