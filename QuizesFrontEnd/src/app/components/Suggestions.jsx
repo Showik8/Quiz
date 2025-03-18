@@ -1,32 +1,39 @@
-import FetchQuiz from "../CustomHoks/FetchQuiz";
+import { useEffect, useMemo, useState } from "react";
+import FetchQuiz from "../CustomHoks/FetchQuiz"
+import StartQuiz from "./StartQuiz";
 import SuggestedCard from "./SuggestedCard";
 
 import "@/app/styles/suggestions.css"
+
+
 const Suggestions = () => {
   let fetched = true;
   let topic = "Layout"
   const URL = "http://localhost:8888";
 
+  const [choosedTopic, setChoosedTopic] = useState("")
+
   FetchQuiz(URL, fetched, topic);
 
-  const savedData= sessionStorage.getItem(topic)|| null
-  let data = ''
 
-  savedData? data = JSON.parse(savedData): null;
+   const data = useMemo(() => {
+     let data = null;
+     const savedData = sessionStorage.getItem(topic) || null;
+     savedData ? (data = JSON.parse(savedData)) : null;
+     return data;
+   }, [topic]);
 
-  setTimeout(() => {
-    sessionStorage.removeItem(topic)
-  }, 5*1000 *60);
+  
 
-
-    if(data){
+    if(data && !choosedTopic){
     return (
       <div className="suggestions">
-        <h3>Suggested Quizes</h3>
+        <h4>Suggested Quizes</h4>
         <div className="suggestedCards">
           {data.map((el, index) => {
             return (
               <SuggestedCard
+                setChoosedTopic={setChoosedTopic}
                 name={el.name}
                 img={el.img}
                 key={index}
@@ -37,7 +44,11 @@ const Suggestions = () => {
         </div>
       </div>
     )}else{
-      return 
+      return (
+        <div>
+          <StartQuiz data={data} topic={choosedTopic} />
+        </div>
+      );
     }
 }
 

@@ -11,8 +11,6 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <h1>Quizzes</h1>
-        <SearchBox />
         <Suggestions />
       </main>
     </>

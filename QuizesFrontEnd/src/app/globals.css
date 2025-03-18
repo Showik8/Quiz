@@ -14,12 +14,18 @@ body {
 
 header {
     width: 100vw;
-    height: 30px;
+    height: 60px;
     display: inline-flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: aquamarine;
+    background-color: rgb(117, 182, 159);
+
+    h1{
+      color: white;
+
+    }
 }
+
 main{
   height: 90%;
   width: 100vw;
@@ -29,36 +35,10 @@ main{
   flex-direction: column;
   gap: 10px;
 
-  span{
-    color: rgb(203, 125, 24);
-    font-size: 34px;
+  h4{
+    color: white;
+    font-size: 26px;
   }
 
 }
 
-.searchBox{
-    display: inline-flex;
-    gap: 10px;
-    flex-direction: column;
-    width: 400px;
-    input{
-      display: inline;
-      border-radius: 20px;
-      border: none;
-      color:white;
-      padding: 16px;
-      background-color: rgb(12, 12, 160);
-    }
-    input::placeholder{
-      color:white;
-    }
-
-    button{
-      padding: 10px 16px;
-      color: white;
-      background-color: green;
-      border: none;
-      border-radius: 20px; 
-      cursor: pointer;
-    }
-}

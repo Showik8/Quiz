@@ -2,7 +2,8 @@
 
 import {useState} from "react";
 import FetchQuiz from "../CustomHoks/FetchQuiz";
-import'../page.module.css'
+import searchIcon from "../assets/svgs/searchIcon.svg";
+import'../styles/searchBox.css'
 
 const SearchBox= () => {
   const [inputValue, setInputValue] = useState("");
@@ -17,7 +18,7 @@ const SearchBox= () => {
   const handleSubmit=()=>{
     setTopic(inputValue)
     setFetched(true)
-    setInputValue(" ")
+    setInputValue("")
   }
 
 
@@ -25,14 +26,14 @@ const SearchBox= () => {
 
 
   return (
-    <div className="searchBox">
-      <input 
-       type="text"
-       onChange={(e)=>handleInputChange(e)}
-       placeholder="Enter Topic Of Quiz"
-       value={inputValue} 
-       />
-      <button onClick={()=>handleSubmit()}>Click</button>
+    <div onClick={() => handleSubmit()} className="searchBox">
+      <img src={searchIcon.src} alt="" />
+      <input
+        type="text"
+        onChange={(e) => handleInputChange(e)}
+        placeholder="Enter Topic Of Quiz"
+        value={inputValue}
+      />
     </div>
   );
 };
