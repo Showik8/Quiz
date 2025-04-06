@@ -1,5 +1,5 @@
 const API = {
-  Programing: [
+  Programming: [
     {
       name: "html",
       questions: [
@@ -1089,7 +1089,7 @@ const API = {
 
 const FastRef = [
   {
-    name: "Programing",
+    name: "Programming",
     img: "https://media.istockphoto.com/id/1386341272/photo/abstract-modern-tech-of-programming-code-screen-developer.jpg?s=612x612&w=0&k=20&c=16FJUoZ6j-XmBDF0g-llzkJaIsdpf6uz46D4eQfL_LM=",
 
     Quizes: ["HTML", "CSS", "JavaScript", "GIT"],
