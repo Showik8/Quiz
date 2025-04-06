@@ -19,10 +19,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "assets")));
 app.use(cors());
 
+mongoose
+  .connect(MONGOURL)
+  .then(() => {
+    console.log("DB is Connected");
+    app.listen(PORT, () => {
+      console.log(`Server is running on http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => console.log(err));
+
+
+
+
 const {API,FastRef} = require("./API");
+const {Quiz,QuizSchema} = require("./models/quizModel")
 const { Programming, Science,Languages } = API;
 const questions = new Array
 const correctAnswers = [];
+
 
 
 
@@ -35,9 +50,24 @@ function filterQuestions(obj){
 
 
 
-app.get("/", (req, res) => {
-  res.send(FastRef);
-});
+Quiz.find()
+  .then((quiz) => {
+    console.log("All users:", quiz);
+    // Send the users data in your Express response
+    // res.json(users);
+  })
+  .catch((err) => {
+    console.error("Error fetching users:", err);
+    // Handle the error in your Express response
+    // res.status(500).send('Error fetching data');
+  });
+
+
+
+
+// app.get("/", (req, res) => {
+//   res.send(FastRef);
+// });
 
 app.get("/api/:id", (req, res) => {
   let id = req.params.id;
@@ -81,7 +111,7 @@ app.get("/languages/:id", (req, res) => {
 });
 
 app.get("/quiz/:id",(req,res)=>{
-  const id = req.params.id.toLocaleLowerCase()
+const id = req.params.id.toLocaleLowerCase()
 let foundQuiz = null;
 for (let key in API) {
   foundQuiz = API[key].find((quiz) => quiz.name === id);
@@ -91,13 +121,5 @@ for (let key in API) {
 res.send(foundQuiz)
 
 })
-
-mongoose.connect(MONGOURL).then(() => {
-  console.log("DB is Connected");
-  app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-  });
-}).catch(err=> console.log(err))
-
 
 
