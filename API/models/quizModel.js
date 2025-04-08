@@ -14,5 +14,18 @@ const fastRefSchema = mongoose.Schema({
     _correct_answer:String
 })
 
+const yourSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  age: Number,
+});
+const YourModel = mongoose.model("YourModel", yourSchema);
+const QuizModel = mongoose.model("QuizModel", quizSchema,);
 
-module.exports = { quizSchema, fastRefSchema };
+
+module.exports = {
+  quizSchema,
+  fastRefSchema,
+  yourSchema,
+  YourModel,
+  QuizModel,
+};
